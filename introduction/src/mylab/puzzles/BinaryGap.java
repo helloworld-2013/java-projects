@@ -14,12 +14,12 @@ public class BinaryGap {
 
     public int solve(int N) {
         return Stream.of(Integer.toBinaryString(N)
-                     .replaceAll("0+$", "") // to remove trailing 0 if occurs at the end
-                     .split("1+")) // to split based on 1 or trailing 1
-                     .filter( a -> a != null )
-                     .max( (a,b) -> Integer.compare(a.length(),b.length()) )
-                     .map(String::length)
-                     .orElse(0);
+                .replaceAll("0+$", "") // to remove trailing 0 if occurs at the end
+                .split("1+")) // to split based on 1 or trailing 1
+                .filter(a -> a != null)
+                .max((a, b) -> Integer.compare(a.length(), b.length()))
+                .map(String::length)
+                .orElse(0);
     }
 
     public static void main(String args[]) throws Exception {
