@@ -1,5 +1,7 @@
 package mylab.puzzles;
 
+import java.util.Scanner;
+
 /**
  * Contact Puzzle
  *
